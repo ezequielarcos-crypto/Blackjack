@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aprende Blackjack</title>
+  <meta name="description" content="Aprende a jugar blackjack: instrucciones simples, guía de estrategia básica y una mesa de práctica con entrenador.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1><span class="logo">♠</span> Aprende Blackjack</h1>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="aprende" role="tab">1. Aprende</button>
+      <button class="tab" data-tab="guia" role="tab">2. Guía</button>
+      <button class="tab" data-tab="jugar" role="tab">3. Practica</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ APRENDE ============ -->
+    <section id="aprende" class="panel active">
+      <div class="hero">
+        <h2>El blackjack en 2 minutos</h2>
+        <p>Juegas tú contra el crupier. Gana quien se acerque más a <strong>21</strong> sin pasarse.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="info">
+          <span class="num">1</span>
+          <h3>El objetivo</h3>
+          <p>Sumar más puntos que el crupier <strong>sin pasarte de 21</strong>. Si te pasas, pierdes al instante, aunque el crupier también se pase después.</p>
+        </article>
+
+        <article class="info">
+          <span class="num">2</span>
+          <h3>Cuánto vale cada carta</h3>
+          <ul>
+            <li><strong>2 al 10:</strong> su número.</li>
+            <li><strong>J, Q, K:</strong> valen 10.</li>
+            <li><strong>As:</strong> vale 11 o 1, lo que más te convenga.</li>
+          </ul>
+          <div class="mini-example">
+            <span class="mini-card">A<i>♠</i></span><span class="mini-card red">7<i>♥</i></span>
+            <span>= 18 “blando” (el As vale 11)</span>
+          </div>
+        </article>
+
+        <article class="info">
+          <span class="num">3</span>
+          <h3>Cómo va una mano</h3>
+          <ol>
+            <li>Haces tu <strong>apuesta</strong>.</li>
+            <li>Recibes <strong>2 cartas</strong> boca arriba. El crupier recibe 2: una visible y una oculta.</li>
+            <li><strong>Decides</strong> qué hacer con tu mano (ver paso 4).</li>
+            <li>Cuando terminas, el crupier muestra su carta oculta y <strong>pide hasta llegar a 17 o más</strong>. No elige: sigue esa regla siempre.</li>
+            <li>Se comparan las manos y se paga.</li>
+          </ol>
+        </article>
+
+        <article class="info">
+          <span class="num">4</span>
+          <h3>Tus opciones</h3>
+          <dl class="moves">
+            <dt class="m-hit">Pedir</dt><dd>Recibes una carta más. Puedes pedir las veces que quieras.</dd>
+            <dt class="m-stand">Plantarse</dt><dd>Te quedas con lo que tienes y termina tu turno.</dd>
+            <dt class="m-double">Doblar</dt><dd>Duplicas tu apuesta, recibes <em>una sola</em> carta más y te plantas. Solo con tus 2 primeras cartas.</dd>
+            <dt class="m-split">Dividir</dt><dd>Si tienes dos cartas iguales, las separas en dos manos (con otra apuesta igual).</dd>
+          </dl>
+        </article>
+
+        <article class="info">
+          <span class="num">5</span>
+          <h3>Cuánto se gana</h3>
+          <ul>
+            <li><strong>Ganas:</strong> cobras 1 a 1 (apuestas 10, ganas 10).</li>
+            <li><strong>Blackjack</strong> (As + carta de 10 de entrada): cobras <strong>3 a 2</strong> (apuestas 10, ganas 15).</li>
+            <li><strong>Empate:</strong> recuperas tu apuesta.</li>
+            <li><strong>Pierdes:</strong> pierdes tu apuesta.</li>
+          </ul>
+        </article>
+
+        <article class="info">
+          <span class="num">6</span>
+          <h3>La idea clave</h3>
+          <p>No juegas solo con tu mano: miras la <strong>carta visible del crupier</strong>.</p>
+          <ul>
+            <li>Si muestra <strong>2 a 6</strong>, es débil: es probable que se pase. Juega seguro.</li>
+            <li>Si muestra <strong>7 a As</strong>, es fuerte: probablemente llegue a 17+. Tendrás que arriesgar más.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="cta">
+        <button class="btn primary go" data-tab="guia">Ver la guía de estrategia →</button>
+        <button class="btn go" data-tab="jugar">Ir directo a practicar</button>
+      </div>
+    </section>
+
+    <!-- ============ GUÍA ============ -->
+    <section id="guia" class="panel">
+      <div class="hero">
+        <h2>Guía de estrategia básica</h2>
+        <p>La estrategia básica es la jugada matemáticamente óptima para cada situación. Con ella, la ventaja de la casa baja a cerca del 0,5 %.</p>
+      </div>
+
+      <article class="info wide">
+        <h3>Las 8 reglas para empezar</h3>
+        <ol class="rules">
+          <li>Con <strong>17 o más</strong> (duro): plántate siempre.</li>
+          <li>Con <strong>13 a 16</strong>: plántate si el crupier muestra 2–6; pide si muestra 7 o más.</li>
+          <li>Con <strong>12</strong>: plántate solo contra 4, 5 o 6; pide contra todo lo demás.</li>
+          <li>Con <strong>11</strong>: dobla (excepto contra un As). Con <strong>10</strong>: dobla contra 2–9.</li>
+          <li>Con <strong>8 o menos</strong>: pide siempre, no puedes pasarte.</li>
+          <li><strong>Siempre divide Ases y ochos.</strong></li>
+          <li><strong>Nunca dividas dieces ni cincos.</strong></li>
+          <li>Con <strong>18 blando</strong> (As + 7): pide contra 9, 10 o As; con 19 blando o más, plántate.</li>
+        </ol>
+      </article>
+
+      <article class="info wide">
+        <h3>Tablas completas</h3>
+        <p class="muted">Busca tu mano en la fila y la carta visible del crupier en la columna. Reglas: 6 barajas, el crupier se planta en todos los 17, se puede doblar tras dividir.</p>
+        <div class="legend">
+          <span class="lg a-H">P · Pedir</span>
+          <span class="lg a-S">PL · Plantarse</span>
+          <span class="lg a-D">D · Doblar</span>
+          <span class="lg a-P">DV · Dividir</span>
+        </div>
+        <div class="tables">
+          <div><h4>Manos duras <small>(sin As, o As que vale 1)</small></h4><div class="tbl-wrap" id="tbl-hard"></div></div>
+          <div><h4>Manos blandas <small>(As que vale 11)</small></h4><div class="tbl-wrap" id="tbl-soft"></div></div>
+          <div><h4>Parejas</h4><div class="tbl-wrap" id="tbl-pairs"></div></div>
+        </div>
+      </article>
+
+      <div class="cards-grid">
+        <article class="info">
+          <h3>Glosario</h3>
+          <dl class="glossary">
+            <dt>Mano dura</dt><dd>Sin As, o con un As que solo puede valer 1. Ej.: 10 + 6 = 16 duro.</dd>
+            <dt>Mano blanda</dt><dd>Con un As que vale 11. No puedes pasarte al pedir una carta. Ej.: A + 6 = 17 blando.</dd>
+            <dt>Blackjack</dt><dd>As + carta de valor 10 con las dos primeras cartas.</dd>
+            <dt>Pasarse</dt><dd>Superar 21. Pierdes al instante.</dd>
+            <dt>Empate</dt><dd>Misma suma que el crupier. Recuperas tu apuesta.</dd>
+            <dt>Zapato</dt><dd>El conjunto de barajas mezcladas de donde se reparte.</dd>
+          </dl>
+        </article>
+        <article class="info">
+          <h3>Errores típicos</h3>
+          <ul>
+            <li><strong>Plantarse con 12–16 contra carta fuerte</strong> por miedo a pasarse. A la larga pierdes más.</li>
+            <li><strong>Tomar el seguro.</strong> Es una apuesta aparte con mala paga; evítalo.</li>
+            <li><strong>Dividir dieces.</strong> Un 20 ya es una mano excelente.</li>
+            <li><strong>No doblar con 11.</strong> Es tu mejor oportunidad de ganar el doble.</li>
+            <li><strong>Jugar por corazonadas.</strong> Las cartas no tienen memoria ni rachas.</li>
+          </ul>
+        </article>
+        <article class="info">
+          <h3>Antes de jugar con dinero</h3>
+          <ul>
+            <li>Busca mesas que paguen el blackjack <strong>3 a 2</strong>; evita las de 6 a 5.</li>
+            <li>Fija un presupuesto y respétalo.</li>
+            <li>Incluso con juego perfecto, <strong>la casa tiene ventaja</strong>. Juega por diversión, no para ganar dinero.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="cta">
+        <button class="btn primary go" data-tab="jugar">Practicar ahora →</button>
+      </div>
+    </section>
+
+    <!-- ============ JUGAR ============ -->
+    <section id="jugar" class="panel">
+      <div class="game-bar">
+        <div class="stat"><span>Fichas</span><strong id="bankroll">1000</strong></div>
+        <div class="stat"><span>Apuesta</span><strong id="bet">0</strong></div>
+        <div class="stat"><span>Aciertos</span><strong id="accuracy">—</strong></div>
+        <label class="switch" title="Te avisa si tu jugada coincide con la estrategia básica">
+          <input type="checkbox" id="coach" checked>
+          <span>Entrenador</span>
+        </label>
+      </div>
+
+      <div class="table">
+        <div class="seat">
+          <div class="seat-label">Crupier <span class="total" id="dealer-total"></span></div>
+          <div class="hand" id="dealer-hand"></div>
+        </div>
+
+        <div class="message" id="message" aria-live="polite">Elige tu apuesta y pulsa “Repartir”.</div>
+
+        <div class="seat">
+          <div class="hands" id="player-hands"></div>
+          <div class="seat-label">Tú</div>
+        </div>
+      </div>
+
+      <div class="coach-box" id="coach-box" aria-live="polite"></div>
+
+      <div class="controls" id="bet-controls">
+        <div class="chips">
+          <button class="chip c10" data-chip="10">10</button>
+          <button class="chip c25" data-chip="20">20</button>
+          <button class="chip c50" data-chip="50">50</button>
+          <button class="chip c100" data-chip="100">100</button>
+        </div>
+        <div class="row">
+          <button class="btn" id="clear-bet">Borrar</button>
+          <button class="btn primary" id="deal">Repartir</button>
+        </div>
+      </div>
+
+      <div class="controls hidden" id="play-controls">
+        <div class="row">
+          <button class="btn act m-hit" id="hit">Pedir</button>
+          <button class="btn act m-stand" id="stand">Plantarse</button>
+          <button class="btn act m-double" id="double">Doblar</button>
+          <button class="btn act m-split" id="split">Dividir</button>
+        </div>
+        <div class="row">
+          <button class="btn ghost" id="hint">💡 Pista</button>
+        </div>
+      </div>
+
+      <div class="foot">
+        <span id="record">Manos: 0 · Ganadas: 0 · Perdidas: 0 · Empates: 0</span>
+        <button class="link" id="reset">Reiniciar fichas y estadísticas</button>
+      </div>
+      <p class="muted center small">Fichas virtuales, sin dinero real. Reglas: 6 barajas · blackjack paga 3:2 · el crupier se planta en 17 · una división por mano.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
